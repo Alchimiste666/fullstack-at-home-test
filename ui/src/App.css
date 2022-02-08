@@ -1,6 +1,8 @@
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
+  background-color: #0d2436;
+  color: #ffffff;
 }
 
 #app-logo {
@@ -24,22 +26,31 @@ body {
 }
 
 .nominee {
+  border-radius: 25px;
+  background-color: #009b86;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 .nominee:hover {
+  background-color: #34ac9c;
   transform: scale(1.04);
   transition-duration: 0.3s;
+}
+
+.nominee.selected {
+  background-color: #009b86;
 }
 
 .nominee-picture {
   width: 50;
   height: 50;
-  border-radius: 10px;
+  margin: 1rem;
+  border-radius: 50px;
 }
 
 .winner-listing {
+  color: black;
   padding: 0.5rem;
   min-width: 30rem;
   min-height: 10rem;
@@ -58,8 +69,8 @@ body {
   right: 30px;
   padding: 12px 20px;
   white-space: nowrap;
-  background-color: #0c9;
-  color: #fff;
+  background-color: #009b86;
+  color: #ffffff;
   border-radius: 50px;
   text-align: center;
   box-shadow: 2px 2px 3px #999;
@@ -72,9 +83,10 @@ body {
 }
 
 .floating-button:hover {
+  color: #cccccc;
   cursor: pointer;
   font-weight: 600;
-  background-color: #009973;
+  background-color: #34ac9c;
 }
 
 .floating-button:active {

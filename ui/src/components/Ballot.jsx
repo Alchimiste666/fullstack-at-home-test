@@ -43,7 +43,6 @@ const Ballot = () => {
       />
       <FloatingButton label="Submit ballot" action={onOpenModal} />
       <Modal open={isModalOpen} onClose={onCloseModal} center>
-        <h2>Winners!</h2>
         <WinnerListing winners={selectedNominees} />
       </Modal>
     </div>

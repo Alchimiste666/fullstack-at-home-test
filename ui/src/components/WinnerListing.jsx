@@ -6,7 +6,12 @@ const WinnerListing = ({ winners }) => {
     </div>
   ));
 
-  return <div className="winner-listing">{mappedWinners}</div>;
+  return (
+    <div className="winner-listing">
+      <h2 className="mb-5">Winners!</h2>
+      {mappedWinners}
+    </div>
+  );
 };
 
 export default WinnerListing;
