@@ -1,30 +1,106 @@
-.App {
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+#app-logo {
+  height: 30px;
+  margin: 0 1rem;
+}
+
+#main-content {
+  padding: 0.5rem;
+}
+
+/* nominees listing */
+.category-title {
+  padding: 1rem;
+  color: #cccccc;
+  background-color: #353535;
+}
+
+.nominees-group {
+  padding: 0.3rem;
+}
+
+.nominee {
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.nominee:hover {
+  transform: scale(1.04);
+  transition-duration: 0.3s;
+}
+
+.nominee-picture {
+  width: 50;
+  height: 50;
+  border-radius: 10px;
+}
+
+.winner-listing {
+  padding: 0.5rem;
+  min-width: 30rem;
+  min-height: 10rem;
+}
+
+.winner {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+/* floating button */
+.floating-button {
+  position: fixed;
+  height: 30px;
+  bottom: 30px;
+  right: 30px;
+  padding: 12px 20px;
+  white-space: nowrap;
+  background-color: #0c9;
+  color: #fff;
+  border-radius: 50px;
   text-align: center;
-}
-
-.App-logo {
-  height: 15vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  min-height: 100vh;
+  box-shadow: 2px 2px 3px #999;
+  font-size: 0.8rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  transition: all 200ms;
 }
 
-.App-link {
-  color: #61dafb;
+.floating-button:hover {
+  cursor: pointer;
+  font-weight: 600;
+  background-color: #009973;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.floating-button:active {
+  background-color: #009973;
+}
+
+/* glow effect */
+
+.glow {
+  border-radius: 25px;
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 20px #0ba9ca, 0 0 30px #0ba9ca,
+    0 0 40px #0ba9ca, 0 0 50px #0ba9ca;
+  -webkit-animation: blink 1s infinite alternate;
+  animation: blink 1s infinite alternate;
+}
+
+@-webkit-keyframes blink {
+  100% {
+    box-shadow: 0 0 3px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ba9ca,
+      0 0 70px #0ba9ca, 0 0 80px #0ba9ca;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@keyframes blink {
+  100% {
+    box-shadow: 0 0 3px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ba9ca,
+      0 0 70px #0ba9ca, 0 0 80px #0ba9ca;
   }
 }

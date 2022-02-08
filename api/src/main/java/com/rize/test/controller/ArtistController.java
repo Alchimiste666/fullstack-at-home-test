@@ -11,6 +11,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,7 +26,8 @@ import com.rize.test.respository.ArtistRepository;
 import com.rize.test.service.ArtistService;
 
 @RestController
-@RequestMapping(path = "/artists", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+@CrossOrigin(originPatterns = { "http://localhost:*", "https://localhost:*" })
+@RequestMapping(path = "/artists", produces = MediaType.APPLICATION_JSON_VALUE)
 public class ArtistController {
 
 	@Autowired
@@ -34,7 +36,7 @@ public class ArtistController {
 	@Autowired
 	private ArtistService artistService;
 
-	@PostMapping
+	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Artist> createArtist(@RequestBody @Valid Artist artist) throws URISyntaxException {
 		Artist createdArtist = artistRepository.save(artist);
 		URI uri = new URI("/artists/" + createdArtist.getId());
