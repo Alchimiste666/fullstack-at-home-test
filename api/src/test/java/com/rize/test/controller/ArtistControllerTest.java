@@ -41,14 +41,14 @@ public class ArtistControllerTest {
 			.andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
 			.andExpect(jsonPath("$", notNullValue()))
 			.andExpect(jsonPath("$.id", is(1)))
-			.andExpect(jsonPath("$.firstName", is("Max")))
-			.andExpect(jsonPath("$.middleName", nullValue()))
-			.andExpect(jsonPath("$.lastName", is("Payne")))
+			.andExpect(jsonPath("$.firstName", is("Dwayne")))
+			.andExpect(jsonPath("$.middleName", is("The Rock")))
+			.andExpect(jsonPath("$.lastName", is("Johnson")))
 			.andExpect(jsonPath("$.category", is(Category.ACTOR.toString())))
-			.andExpect(jsonPath("$.birthday", is("1990-01-01T08:00:00.000+00:00")))
-			.andExpect(jsonPath("$.email", is("max.payne@test.org")))
-			.andExpect(jsonPath("$.notes", is("Max Payne killing it!")))
-			.andExpect(jsonPath("$.fullName", is("max payne")))
+			.andExpect(jsonPath("$.birthday", is("1980-01-01T08:00:00.000+00:00")))
+			.andExpect(jsonPath("$.email", is("dwayne.johnson@hollywood.org")))
+			.andExpect(jsonPath("$.notes", nullValue()))
+			.andExpect(jsonPath("$.fullName", is("dwayne johnson")))
 			.andExpect(jsonPath("$.birthdayMonth", is("january")));
 	}
 	
